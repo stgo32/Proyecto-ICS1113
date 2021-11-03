@@ -113,7 +113,7 @@ model.setObjective(obj, GRB.MAXIMIZE)
 model.optimize()
 
 # Mostrar los valores de las soluciones
-model.printAttr("X")
+model.printAttr("x")
 print("\n-------------\n")
 # Imprime las holguras de las restricciones (0 significa que la restricción es activa.
 for constr in model.getConstrs():

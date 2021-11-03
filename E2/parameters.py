@@ -25,3 +25,5 @@ MAX_L = 5
 
 MIN_A = 0
 MAX_A = 25
+
+M_GRANDE = 999999

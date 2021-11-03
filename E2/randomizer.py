@@ -18,7 +18,7 @@ def disponibilidad_j_k(espacios, modulos):
     return disponibilidad
 
 
-def reuniones_i_l(personas, reuniones):
+def clave_i_l(personas, reuniones):
     disponibilidad = {}
     for i in personas:
         for r in reuniones:
@@ -31,6 +31,13 @@ def min_l(reuniones, min_, max_):
     for r in reuniones:
         min_l.append(randint(min_, max_))
     return min_l
+
+
+def max_l(reuniones, min_l, max_):
+    max_l = []
+    for r in range(len(reuniones)):
+        max_l.append(randint(min_l[r], max_))
+    return max_l
 
 
 def aforo_j(espacios, min_, max_):
@@ -55,6 +62,12 @@ def utilidades_l(reuniones):
 
 
 def randomize(i, j, k, L):
+    """
+    i -> int cantidad de personas
+    j -> int cantidad de espacios
+    k -> int cantidad de modulos
+    l -> int cantidad de reuniones
+    """
     personas = p.personas(i)
     espacios = p.espacios(j)
     modulos = p.modulos(k)
@@ -62,8 +75,9 @@ def randomize(i, j, k, L):
 
     disp_i_k = disponibilidad_i_k(personas, modulos)
     disp_j_k = disponibilidad_j_k(espacios, modulos)
-    reu_i_l = reuniones_i_l(personas, reuniones)
+    clave = clave_i_l(personas, reuniones)
     m_l = min_l(reuniones, p.MIN_L, p.MAX_L)
+    maxx_l = max_l(reuniones, m_l, p.MAX_L)
     af_j = aforo_j(espacios, p.MIN_A, p.MAX_A)
     util_i = utilidades_i(personas)
     util_l = utilidades_l(reuniones)
@@ -76,12 +90,13 @@ def randomize(i, j, k, L):
     print('======================================================')
     print(f'disponibilidad_i_k: {disp_i_k}')
     print(f'disponibilidad_j_k: {disp_j_k}')
-    print(f'reuniones_i_l: {reu_i_l}')
+    print(f'clave_i_l: {clave}')
     print(f'min_l: {m_l}')
+    print(f'max_l: {maxx_l}')
     print(f'aforo_j: {af_j}')
     print(f'utilidades_i: {util_i}')
     print(f'utilidades_l: {util_l}')
     print('------------------------------------------------------')
 
     return personas, espacios, modulos, reuniones, \
-        disp_i_k, disp_j_k, reu_i_l, m_l, af_j, util_i, util_l
+        disp_i_k, disp_j_k, clave, m_l, maxx_l, af_j, util_i, util_l
