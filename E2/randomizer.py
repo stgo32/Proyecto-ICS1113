@@ -1,5 +1,23 @@
-from random import randint, uniform
+from random import randint, uniform, choice
+from faker import Faker
 import parameters as p
+
+
+def set_personas(i):
+    fake = Faker()
+    return [f'{fake.name()}' for j in range(i)]
+
+
+def set_espacios(j):
+    return [f'{choice(p.salas)}{i + 1}' for i in range(j)]
+
+
+def set_modulos(k):
+    return [f'{day}{i + 1}' for day in p.days for i in range(k)]
+
+
+def set_reuniones(L):
+    return [f'Reunion{i + 1}' for i in range(L)]
 
 
 def disponibilidad_i_k(personas, modulos):
@@ -68,10 +86,10 @@ def randomize(i, j, k, L):
     k -> int cantidad de modulos
     l -> int cantidad de reuniones
     """
-    personas = p.personas(i)
-    espacios = p.espacios(j)
-    modulos = p.modulos(k)
-    reuniones = p.reuniones(L)
+    personas = set_personas(i)
+    espacios = set_espacios(j)
+    modulos = set_modulos(k)
+    reuniones = set_reuniones(L)
 
     disp_i_k = disponibilidad_i_k(personas, modulos)
     disp_j_k = disponibilidad_j_k(espacios, modulos)
@@ -82,6 +100,7 @@ def randomize(i, j, k, L):
     util_i = utilidades_i(personas)
     util_l = utilidades_l(reuniones)
 
+    """
     print('------------------------------------------------------')
     print(personas)
     print(espacios)
@@ -97,6 +116,7 @@ def randomize(i, j, k, L):
     print(f'utilidades_i: {util_i}')
     print(f'utilidades_l: {util_l}')
     print('------------------------------------------------------')
+    """
 
     with open('E2/DB/personas.csv', 'w') as file:
         for persona in personas:
@@ -113,19 +133,19 @@ def randomize(i, j, k, L):
     with open('E2/DB/disponibilidad_i_k.csv', 'w') as file:
         file.write('Nombre,Modulo,Valor\n')
         for key, value in disp_i_k:
-            a = (f'{key}', f'{value}') 
+            a = (f'{key}', f'{value}')
             b = disp_i_k[a]
             file.write(f'{key},{value},{b}\n')
     with open('E2/DB/disponibilidad_j_k.csv', 'w') as file:
         file.write('Espacio,Modulo,Valor\n')
         for key, value in disp_j_k:
-            a = (f'{key}', f'{value}') 
+            a = (f'{key}', f'{value}')
             b = disp_j_k[a]
             file.write(f'{key},{value},{b}\n')
     with open('E2/DB/clave_i_l.csv', 'w') as file:
         file.write('Nombre,Reunion,Valor\n')
         for key, value in clave:
-            a = (f'{key}', f'{value}') 
+            a = (f'{key}', f'{value}')
             b = clave[a]
             file.write(f'{key},{value},{b}\n')
     with open('E2/DB/min_l.csv', 'w') as file:
