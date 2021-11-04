@@ -4,7 +4,7 @@ from parameters import M_GRANDE
 
 
 personas, espacios, modulos, reuniones, disponibilidad_i_k, disponibilidad_j_k, \
-    clave_i_l, min_l, max_l, aforo_j, utilidades_i, utilidades_l = randomize(3, 3, 5, 3)
+    clave_i_l, min_l, max_l, aforo_j, utilidades_i, utilidades_l = randomize(3, 3, 2, 3)
 
 model = Model('Optimizacion del Uso de Espacios en los Colegios dado el Contexto en Pandemia')
 
@@ -42,17 +42,17 @@ model.addConstrs(
     name='cantidad_participantes(1)'
 )
 
-model.addConstrs(
-    (quicksum(
-        x[persona, espacio, modulo, reunion]
-        for persona in personas
-        for espacio in espacios
-        for modulo in modulos
-        # for reunion in reuniones
-    ) >= pr[reunion]
-        for reunion in reuniones),
-    name='cantidad_participantes(2)'
-)
+# model.addConstrs(
+#     (quicksum(
+#         x[persona, espacio, modulo, reunion]
+#         for persona in personas
+#         for espacio in espacios
+#         for modulo in modulos
+#         # for reunion in reuniones
+#     ) >= pr[reunion]
+#         for reunion in reuniones),
+#     name='cantidad_participantes(2)'
+# )
 
 # 2.5.2. disponibilidad participantes
 model.addConstrs(
@@ -171,7 +171,7 @@ model.optimize()
 model.printAttr("x")
 print("\n-------------\n")
 # Imprime las holguras de las restricciones (0 significa que la restricción es activa.
-for constr in model.getConstrs():
-    print(constr, constr.getAttr("slack"))
+# for constr in model.getConstrs():
+#     print(constr, constr.getAttr("slack"))
 
 print(model)

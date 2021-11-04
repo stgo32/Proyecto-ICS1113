@@ -98,5 +98,56 @@ def randomize(i, j, k, L):
     print(f'utilidades_l: {util_l}')
     print('------------------------------------------------------')
 
+    with open('E2/DB/personas.csv', 'w') as file:
+        for persona in personas:
+            file.write(f'{persona}\n')
+    with open('E2/DB/espacios.csv', 'w') as file:
+        for esp in espacios:
+            file.write(f'{esp}\n')
+    with open('E2/DB/modulos.csv', 'w') as file:
+        for mod in modulos:
+            file.write(f'{mod}\n')
+    with open('E2/DB/reuniones.csv', 'w') as file:
+        for reu in reuniones:
+            file.write(f'{reu}\n')
+    with open('E2/DB/disponibilidad_i_k.csv', 'w') as file:
+        file.write('Nombre,Modulo,Valor\n')
+        for key, value in disp_i_k:
+            a = (f'{key}', f'{value}') 
+            b = disp_i_k[a]
+            file.write(f'{key},{value},{b}\n')
+    with open('E2/DB/disponibilidad_j_k.csv', 'w') as file:
+        file.write('Espacio,Modulo,Valor\n')
+        for key, value in disp_j_k:
+            a = (f'{key}', f'{value}') 
+            b = disp_j_k[a]
+            file.write(f'{key},{value},{b}\n')
+    with open('E2/DB/clave_i_l.csv', 'w') as file:
+        file.write('Nombre,Reunion,Valor\n')
+        for key, value in clave:
+            a = (f'{key}', f'{value}') 
+            b = clave[a]
+            file.write(f'{key},{value},{b}\n')
+    with open('E2/DB/min_l.csv', 'w') as file:
+        for reu in m_l:
+            file.write(f'{reu}\n')
+    with open('E2/DB/max_l.csv', 'w') as file:
+        for reu in maxx_l:
+            file.write(f'{reu}\n')
+    with open('E2/DB/aforo_j.csv', 'w') as file:
+        for reu in af_j:
+            file.write(f'{reu}\n')
+    with open('E2/DB/utilidades_i.csv', 'w') as file:
+        file.write('Nombre,Utilidad\n')
+        for key in util_i:
+            file.write(f'{key},{util_i[str(key)]}\n')
+    with open('E2/DB/utilidades_l.csv', 'w') as file:
+        file.write('Reunion,Utilidad\n')
+        for key in util_l:
+            file.write(f'{key},{util_l[str(key)]}\n')
+
     return personas, espacios, modulos, reuniones, \
         disp_i_k, disp_j_k, clave, m_l, maxx_l, af_j, util_i, util_l
+
+
+randomize(3, 3, 3, 3)

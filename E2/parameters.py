@@ -1,25 +1,31 @@
-days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
+from faker import Faker
+from random import choice
+
 
 # CONJUNTOS
 
 
 def personas(i):
-    return [f'I{j}' for j in range(i)]
+    fake = Faker()
+    return [f'{fake.name()}' for j in range(i)]
 
 
 def espacios(j):
-    return [f'J{i}' for i in range(j)]
+    return [f'{choice(salas)}{i + 1}' for i in range(j)]
 
 
 def modulos(k):
-    return [f'K{i}' for i in range(k)]
+    return [f'{day}{i + 1}' for day in days for i in range(k)]
 
 
 def reuniones(L):
-    return [f'L{i}' for i in range(L)]
+    return [f'Reunion{i + 1}' for i in range(L)]
 
 
 # PARAMETROS FIJOS
+days = ['L', 'M', 'W', 'J', 'V']
+salas = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
+
 MIN_L = 0
 MAX_L = 5
 
