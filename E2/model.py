@@ -1,10 +1,26 @@
 from gurobipy import GRB, Model, quicksum
 from randomizer import randomize
 from parameters import M_GRANDE
+from read_csv import read_simple_csv, read_dict_csv_int, read_dict_csv_float
 
 
-personas, espacios, modulos, reuniones, disponibilidad_i_k, disponibilidad_j_k, \
-    clave_i_l, min_l, max_l, aforo_j, utilidades_i, utilidades_l = randomize(3, 3, 2, 3)
+# personas, espacios, modulos, reuniones, disponibilidad_i_k, disponibilidad_j_k, clave_i_l, min_l, \
+#     max_l, aforo_j, utilidades_i, utilidades_l, costos_l, presencialidad = randomize(6, 7, 9, 4)
+
+personas = read_simple_csv('personas')
+espacios = read_simple_csv('espacios')
+modulos = read_simple_csv('modulos')
+reuniones = read_simple_csv('reuniones')
+disponibilidad_i_k = read_dict_csv_int('disponibilidad_i_k')
+disponibilidad_j_k = read_dict_csv_int('disponibilidad_j_k')
+clave_i_l = read_dict_csv_int('clave_i_l')
+min_l = read_simple_csv('min_l')
+max_l = read_simple_csv('max_l')
+aforo_j = read_simple_csv('aforo_j')
+utilidades_i = read_dict_csv_float('utilidades_i')
+utilidades_l = read_dict_csv_float('utilidades_l')
+costos_l = read_dict_csv_float('costos_l')
+presencialidad = read_dict_csv_float('presencialidad')
 
 model = Model('Optimizacion del Uso de Espacios en los Colegios dado el Contexto en Pandemia')
 
@@ -98,6 +114,7 @@ model.addConstrs(
     ) <= 1
         for espacio in espacios
         for modulo in modulos
+        # if espacio != 'Remoto'
     ),
     name='disp_espacio_fisico(1)'
 )
@@ -119,11 +136,31 @@ model.addConstrs(
         de[espacio, modulo, reunion]
         for espacio in espacios
         for modulo in modulos
+        # if espacio != 'Remoto'
     ) <= pr[reunion]
         for reunion in reuniones
     ),
     name='disp_espacio_fisico(3)'
 )
+
+# model.addConstr(
+#     (quicksum(pr['Reunion1'] for i in range(3)) <= 0),
+#     name='disp_espacio_fisico(4)'
+# )
+
+# model.addConstrs(
+#     (pr[reunion] == presencialidad[espacio]
+#         for espacio in espacios
+#         for reunion in reuniones),
+#     name='si_remoto_no_presencial'
+# )
+
+# model.addConstrs(
+#     (de['Remoto', modulo, reunion] >= pr[reunion] + 1
+#         for modulo in modulos
+#         for reunion in reuniones),
+#     name='fuck'
+# )
 
 # 2.5.6. participantes clave
 model.addConstrs(
@@ -153,16 +190,16 @@ model.addConstrs(
 
 # FUNCION OBJETIVO
 obj = (
-    quicksum(
+    (quicksum(
         x[persona, espacio, modulo, reunion] * utilidades_i[persona]
         for persona in personas
         for espacio in espacios
         for modulo in modulos
         for reunion in reuniones
     )) + (quicksum(
-        pr[reunion] * utilidades_l[reunion]
+        pr[reunion] * utilidades_l[reunion] + utilidades_l[reunion]/3 * (1 - pr[reunion])
         for reunion in reuniones
-    )
+    ))
 )
 model.setObjective(obj, GRB.MAXIMIZE)
 model.optimize()

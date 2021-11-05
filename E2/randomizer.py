@@ -9,7 +9,10 @@ def set_personas(i):
 
 
 def set_espacios(j):
-    return [f'{choice(p.salas)}{i + 1}' for i in range(j)]
+    esp = []
+    for i in range(j):
+        esp.append(f'{choice(p.salas)}{i + 1}')
+    return esp
 
 
 def set_modulos(k):
@@ -79,6 +82,23 @@ def utilidades_l(reuniones):
     return util
 
 
+def costos_l(reuniones):
+    costo = {}
+    for r in reuniones:
+        costo[r] = round(uniform(0, 1), 3)
+    return costo
+
+
+def presencialidad(espacios):
+    p = {}
+    for e in espacios:
+        if e == 'Remoto':
+            p['Remoto'] = 0
+        else:
+            p[e] = 1
+    return p
+
+
 def randomize(i, j, k, L):
     """
     i -> int cantidad de personas
@@ -99,6 +119,8 @@ def randomize(i, j, k, L):
     af_j = aforo_j(espacios, p.MIN_A, p.MAX_A)
     util_i = utilidades_i(personas)
     util_l = utilidades_l(reuniones)
+    costo_l = costos_l(reuniones)
+    pre = presencialidad(espacios)
 
     """
     print('------------------------------------------------------')
@@ -165,9 +187,18 @@ def randomize(i, j, k, L):
         file.write('Reunion,Utilidad\n')
         for key in util_l:
             file.write(f'{key},{util_l[str(key)]}\n')
+    with open('E2/DB/costos_l.csv', 'w') as file:
+        file.write('Reunion,Costo\n')
+        for key in costo_l:
+            file.write(f'{key},{costo_l[str(key)]}\n')
+    with open('E2/DB/presencialidad.csv', 'w') as file:
+        file.write('Espacio,Valor\n')
+        for key in pre:
+            file.write(f'{key},{int(pre[str(key)])}\n')
 
-    return personas, espacios, modulos, reuniones, \
-        disp_i_k, disp_j_k, clave, m_l, maxx_l, af_j, util_i, util_l
+    return personas, espacios, modulos, reuniones, disp_i_k, \
+        disp_j_k, clave, m_l, maxx_l, af_j, util_i, util_l, costo_l, pre
 
 
-randomize(3, 3, 3, 3)
+if __name__ == 'main':
+    randomize(3, 3, 3, 3)
