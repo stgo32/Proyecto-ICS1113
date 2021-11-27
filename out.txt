@@ -1,0 +1,40 @@
+asistencia[Ryan Wright,G1,V7,Reunion2]            1 
+asistencia[Ryan Wright,A7,W3,Reunion4]            1 
+asistencia[Ryan Wright,E8,J2,Reunion7]            1
+asistencia[Christina Johnson,G1,L4,Reunion8]            1
+asistencia[Christina Johnson,A7,W3,Reunion4]            1
+asistencia[Christina Johnson,E8,L6,Reunion5]            1
+asistencia[Heidi Ford,G1,V7,Reunion2]            1
+asistencia[Lauren Moyer,G1,L1,Reunion6]            1 
+asistencia[Lauren Moyer,G1,L4,Reunion8]            1
+asistencia[Lauren Moyer,G1,M2,Reunion3]            1
+asistencia[Lauren Moyer,G1,V7,Reunion2]            1
+asistencia[Lauren Moyer,A7,W3,Reunion4]            1
+asistencia[Dr. John Zuniga,G1,W6,Reunion1]            1
+asistencia[Mrs. Abigail Wilson MD,G1,L4,Reunion8]            1
+asistencia[Mrs. Abigail Wilson MD,G1,W6,Reunion1]            1
+asistencia[Mrs. Abigail Wilson MD,E8,L6,Reunion5]            1 
+asistencia[Mrs. Abigail Wilson MD,E8,J2,Reunion7]            1
+asistencia[Vincent Proctor,G1,L1,Reunion6]            1
+asistencia[Vincent Proctor,G1,M2,Reunion3]            1
+asistencia[Vincent Proctor,G1,V7,Reunion2]            1
+asistencia[Vincent Proctor,A7,W3,Reunion4]            1
+asistencia[Vincent Proctor,E8,J2,Reunion7]            1
+asistencia[Robin Ramirez,A7,W3,Reunion4]            1
+asistencia[Robin Ramirez,E8,L6,Reunion5]            1
+disponibilidad_espacio[G1,L1,Reunion6]            1
+disponibilidad_espacio[G1,L4,Reunion8]            1
+disponibilidad_espacio[G1,M2,Reunion3]            1
+disponibilidad_espacio[G1,W6,Reunion1]            1 
+disponibilidad_espacio[G1,V7,Reunion2]            1
+disponibilidad_espacio[A7,W3,Reunion4]            1
+disponibilidad_espacio[E8,L6,Reunion5]            1
+disponibilidad_espacio[E8,J2,Reunion7]            1
+presencialidad[Reunion1]            1
+presencialidad[Reunion2]            1
+presencialidad[Reunion3]            1
+presencialidad[Reunion4]            1
+presencialidad[Reunion5]            1
+presencialidad[Reunion6]            1
+presencialidad[Reunion7]            1
+presencialidad[Reunion8]            1
