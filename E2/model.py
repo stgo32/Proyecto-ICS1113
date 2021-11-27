@@ -1,15 +1,16 @@
 from gurobipy import GRB, Model, quicksum
 import gurobipy
 from randomizer import randomize
-from parameters import M_GRANDE, CANTIDAD_PERSONAS, CANTIDAD_ESPACIOS_FISICOS, CANTIDAD_MODULOS, CANTIDAD_REUNIONES
+from parameters import (M_GRANDE, CANTIDAD_PERSONAS, CANTIDAD_ESPACIOS_FISICOS,
+                        CANTIDAD_MODULOS, CANTIDAD_REUNIONES, CAMBIAR_PERSONAS,
+                        CAMBIAR_SALAS, CAMBIAR_MODULOS, CAMBIAR_REUNIONES)
 from read_csv import read_simple_csv, read_dict_csv_int, read_dict_csv_float
-
 
 def solve_model():
 
-
+    new = {"personas": CAMBIAR_PERSONAS, "salas": CAMBIAR_SALAS, "modulos": CAMBIAR_MODULOS, "reuniones": CAMBIAR_REUNIONES}
     personas, espacios, modulos, reuniones, disponibilidad_i_k, disponibilidad_j_k, clave_i_l, min_l, \
-            max_l, aforo_j, utilidades_i, utilidades_l, costos_l, presencialidad = randomize(CANTIDAD_PERSONAS, CANTIDAD_ESPACIOS_FISICOS, CANTIDAD_MODULOS, CANTIDAD_REUNIONES)
+            max_l, aforo_j, utilidades_i, utilidades_l, costos_l, presencialidad = randomize(CANTIDAD_PERSONAS, CANTIDAD_ESPACIOS_FISICOS, CANTIDAD_MODULOS, CANTIDAD_REUNIONES, new)
 
     #personas = read_simple_csv('personas')
     #espacios = read_simple_csv('espacios')
@@ -220,13 +221,14 @@ def solve_model():
 
 if __name__ == "__main__":
     solved = 0
-    while not solved:
-        try: 
-            model = solve_model()
-            solved = 1
-            model.write("out.sol")
-        except gurobipy.GurobiError:
-            print("No se pudo resolver")
-        except Exception as error:
-            print(error)
-            break
+    #while not solved:
+    #    try: 
+    #        model = solve_model()
+    #        solved = 1
+    #        model.write("out.sol")
+    #    except gurobipy.GurobiError:
+    #        print("No se pudo resolver")
+    #    except Exception as error:
+    #        print(error)
+    #        break
+    model = solve_model()

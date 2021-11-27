@@ -1,3 +1,59 @@
+DEBUG ['E2\\model.py', '8', '8', '9', '8', '0', '25', '5', '1']
+Set parameter Username
+Academic license - for non-commercial use only - expires 2022-01-25
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 6 physical cores, 6 logical processors, using up to 6 threads
+Optimize a model with 164295 rows, 162015 columns and 1093515 nonzeros
+Model fingerprint: 0x3e4ae7e9
+Variable types: 0 continuous, 162015 integer (162015 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+06]
+  Objective range  [1e-02, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 7e+00]
+Presolve removed 154550 rows and 117780 columns
+Presolve time: 2.01s
+Presolved: 9745 rows, 44235 columns, 202237 nonzeros
+Variable types: 0 continuous, 44235 integer (44235 binary)
+
+Root relaxation: objective 4.252200e+01, 11593 iterations, 0.70 seconds (0.64 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   42.52200    0   37          -   42.52200      -     -    3s
+H    0     0                      35.2380000   42.52200  20.7%     -    3s
+H    0     0                      35.4320000   42.52200  20.0%     -    4s
+H    0     0                      38.4280000   42.52200  10.7%     -    4s
+H    0     0                      40.3030000   42.52200  5.51%     -    4s
+     0     0   42.52200    0   57   40.30300   42.52200  5.51%     -    5s
+H    0     0                      40.6430000   42.52200  4.62%     -    5s
+     0     0   42.52200    0   62   40.64300   42.52200  4.62%     -    5s
+H    0     0                      41.5500000   42.52200  2.34%     -    5s
+H    0     0                      42.0270000   42.52200  1.18%     -    8s
+     0     0   42.52200    0   27   42.02700   42.52200  1.18%     -    8s
+H    0     0                      42.5220000   42.52200  0.00%     -    8s
+     0     0   42.52200    0   27   42.52200   42.52200  0.00%     -    8s
+
+Cutting planes:
+  Gomory: 52
+  Lift-and-project: 1
+  Cover: 90
+  Clique: 124
+  MIR: 3
+  StrongCG: 1
+  Zero half: 2
+
+Explored 1 nodes (46612 simplex iterations) in 8.87 seconds (7.29 work units)
+Thread count was 6 (of 6 available processors)
+
+Solution count 8: 42.522 42.027 41.55 ... 35.238
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.252200000000e+01, best bound 4.252200000000e+01, gap 0.0000%
+
+    Variable            x 
+-------------------------
 asistencia[Christopher Hamilton Jr.,E1,M4,Reunion7]            1 
 asistencia[Christopher Hamilton Jr.,E1,V6,Reunion1]            1 
 asistencia[Christopher Hamilton Jr.,C2,J9,Reunion8]            1 
@@ -75,3 +131,6 @@ presencialidad[Reunion12]            1
 presencialidad[Reunion13]            1 
 presencialidad[Reunion14]            1 
 presencialidad[Reunion15]            1 
+
+-------------
+

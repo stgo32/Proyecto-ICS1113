@@ -1,28 +1,6 @@
 from pprint import pprint
 
 
-class Persona:
-
-    def __init__(self, name):
-        self.name = name
-
-
-class Reunion:
-
-    def __init__(self, numero, modulo, sala, presencialidad, personas):
-        self.numero = numero
-        self.modulo = modulo
-        self.sala = sala
-        self.presencialidad = presencialidad
-        self.personas = personas
-
-
-class Espacio:
-
-    def __init__(self, aforo):
-        self.aforo = aforo
-
-
 def parse_line(line, name) -> list:
     """
     Parse a line of the output of gurobi and returns
