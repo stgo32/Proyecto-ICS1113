@@ -1,6 +1,12 @@
 days = ['L', 'M', 'W', 'J', 'V']
 salas = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
 
+
+CANTIDAD_PERSONAS = 8
+CANTIDAD_ESPACIOS_FISICOS = 8
+CANTIDAD_MODULOS = 8
+CANTIDAD_REUNIONES = 8
+
 MIN_L = 0
 MAX_L = 5
 
