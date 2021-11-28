@@ -7,10 +7,9 @@ from parameters import (M_GRANDE, CANTIDAD_PERSONAS, CANTIDAD_ESPACIOS_FISICOS,
 from read_csv import read_simple_csv, read_dict_csv_int, read_dict_csv_float
 
 def solve_model():
-
-    new = {"personas": CAMBIAR_PERSONAS, "salas": CAMBIAR_SALAS, "modulos": CAMBIAR_MODULOS, "reuniones": CAMBIAR_REUNIONES}
-    personas, espacios, modulos, reuniones, disponibilidad_i_k, disponibilidad_j_k, clave_i_l, min_l, \
-            max_l, aforo_j, utilidades_i, utilidades_l, costos_l, presencialidad = randomize(CANTIDAD_PERSONAS, CANTIDAD_ESPACIOS_FISICOS, CANTIDAD_MODULOS, CANTIDAD_REUNIONES, new)
+    #new = {"personas": CAMBIAR_PERSONAS, "salas": CAMBIAR_SALAS, "modulos": CAMBIAR_MODULOS, "reuniones": CAMBIAR_REUNIONES}
+    #personas, espacios, modulos, reuniones, disponibilidad_i_k, disponibilidad_j_k, clave_i_l, min_l, \
+    #        max_l, aforo_j, utilidades_i, utilidades_l, costos_l, presencialidad = randomize(CANTIDAD_PERSONAS, CANTIDAD_ESPACIOS_FISICOS, CANTIDAD_MODULOS, CANTIDAD_REUNIONES, new)
 
     personas = read_simple_csv('personas')
     espacios = read_simple_csv('espacios')

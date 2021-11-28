@@ -3,9 +3,13 @@ import random
 from faker import Faker
 import parameters as p
 from read_csv import read_simple_csv
+import sys
 
-#random.seed(10)
-#Faker.seed(10)
+#seed = random.randrange(sys.maxsize)
+seed = 5933002158754574543
+random.seed(seed)
+Faker.seed(seed)
+print("Seed was:", seed)
 
 
 def set_personas(i):
