@@ -12,23 +12,22 @@ def solve_model():
     personas, espacios, modulos, reuniones, disponibilidad_i_k, disponibilidad_j_k, clave_i_l, min_l, \
             max_l, aforo_j, utilidades_i, utilidades_l, costos_l, presencialidad = randomize(CANTIDAD_PERSONAS, CANTIDAD_ESPACIOS_FISICOS, CANTIDAD_MODULOS, CANTIDAD_REUNIONES, new)
 
-    #personas = read_simple_csv('personas')
-    #espacios = read_simple_csv('espacios')
-    #modulos = read_simple_csv('modulos')
-    #reuniones = read_simple_csv('reuniones')
-    #disponibilidad_i_k = read_dict_csv_int('disponibilidad_i_k')
-    #disponibilidad_j_k = read_dict_csv_int('disponibilidad_j_k')
-    #clave_i_l = read_dict_csv_int('clave_i_l')
-    #min_l = read_simple_csv('min_l')
-    #max_l = read_simple_csv('max_l')
-    #aforo_j = read_simple_csv('aforo_j')
-    #utilidades_i = read_dict_csv_float('utilidades_i')
-    #utilidades_l = read_dict_csv_float('utilidades_l')
-    #costos_l = read_dict_csv_float('costos_l')
-    #presencialidad = read_dict_csv_float('presencialidad')
+    personas = read_simple_csv('personas')
+    espacios = read_simple_csv('espacios')
+    modulos = read_simple_csv('modulos')
+    reuniones = read_simple_csv('reuniones')
+    disponibilidad_i_k = read_dict_csv_int('disponibilidad_i_k')
+    disponibilidad_j_k = read_dict_csv_int('disponibilidad_j_k')
+    clave_i_l = read_dict_csv_int('clave_i_l')
+    min_l = read_simple_csv('min_l')
+    max_l = read_simple_csv('max_l')
+    aforo_j = read_simple_csv('aforo_j')
+    utilidades_i = read_dict_csv_float('utilidades_i')
+    utilidades_l = read_dict_csv_float('utilidades_l')
+    costos_l = read_dict_csv_float('costos_l')
+    presencialidad = read_dict_csv_float('presencialidad')
 
     model = Model('Optimizacion del Uso de Espacios en los Colegios dado el Contexto en Pandemia')
-
     # variables
     x = model.addVars(
         personas, espacios, modulos, reuniones,

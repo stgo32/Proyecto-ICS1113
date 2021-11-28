@@ -4,7 +4,8 @@ from faker import Faker
 import parameters as p
 from read_csv import read_simple_csv
 
-random.seed(10)
+#random.seed(10)
+#Faker.seed(10)
 
 
 def set_personas(i):
@@ -224,5 +225,5 @@ def randomize(i, j, k, L, new={"personas": 1, "salas": 1, "modulos": 1, "reunion
 
 
 if __name__ == '__main__':
-    new = {"personas": 0, "salas": 0, "modulos": 0, "reuniones": 0}
+    new = {"personas": 1, "salas": 0, "modulos": 0, "reuniones": 0}
     randomize(10, 12, 9, 8, new)
