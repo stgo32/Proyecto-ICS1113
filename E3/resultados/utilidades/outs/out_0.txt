@@ -1,0 +1,24 @@
+asistencia[Hector Johnson,B1,L2,Reunion3]            1 
+asistencia[John Ellis,B1,L2,Reunion3]            1 
+asistencia[John Ellis,B1,M6,Reunion5]            1
+asistencia[Susan Townsend,B1,L2,Reunion3]            1 
+asistencia[Elizabeth Lewis,B1,L1,Reunion2]            1 
+asistencia[Elizabeth Lewis,B1,V1,Reunion1]            1
+asistencia[Vanessa Collins,B1,V1,Reunion1]            1 
+asistencia[Peter Castillo,B1,M6,Reunion5]            1 
+asistencia[Peter Castillo,B1,V1,Reunion1]            1
+asistencia[Peter Castillo,F4,L9,Reunion4]            1
+asistencia[Benjamin Douglas,B1,L1,Reunion2]            1 
+asistencia[Benjamin Douglas,B1,L2,Reunion3]            1 
+asistencia[Benjamin Douglas,B1,M6,Reunion5]            1
+asistencia[Benjamin Douglas,F4,L9,Reunion4]            1
+disponibilidad_espacio[B1,L1,Reunion2]            1
+disponibilidad_espacio[B1,L2,Reunion3]            1
+disponibilidad_espacio[B1,M6,Reunion5]            1
+disponibilidad_espacio[B1,V1,Reunion1]            1 
+disponibilidad_espacio[F4,L9,Reunion4]            1
+presencialidad[Reunion1]            1
+presencialidad[Reunion2]            1
+presencialidad[Reunion3]            1
+presencialidad[Reunion4]            1
+presencialidad[Reunion5]            1

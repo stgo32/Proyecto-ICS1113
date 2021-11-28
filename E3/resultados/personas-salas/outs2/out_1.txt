@@ -1,0 +1,30 @@
+asistencia[Hector Johnson,D2,L8,Reunion5]            1 
+asistencia[Hector Johnson,C3,L3,Reunion1]            1
+asistencia[Susan Townsend,C3,L3,Reunion1]            1
+asistencia[Elizabeth Lewis,D2,M8,Reunion2]            1
+asistencia[Vanessa Collins,D2,M2,Reunion4]            1
+asistencia[Vanessa Collins,D2,J8,Reunion3]            1
+asistencia[Vanessa Collins,C3,L3,Reunion1]            1
+asistencia[Benjamin Douglas,D2,J8,Reunion3]            1 
+asistencia[Benjamin Douglas,C3,L3,Reunion1]            1
+asistencia[Christopher Brown,D2,M2,Reunion4]            1
+asistencia[Christopher Brown,D2,M8,Reunion2]            1
+asistencia[Michele Gomez,D2,L8,Reunion5]            1
+asistencia[Michele Gomez,D2,M8,Reunion2]            1
+asistencia[Michele Gomez,D2,J8,Reunion3]            1
+asistencia[Michele Gomez,C3,L3,Reunion1]            1
+asistencia[Douglas Oliver,D2,L8,Reunion5]            1
+asistencia[Douglas Oliver,D2,M2,Reunion4]            1
+asistencia[Sheryl Humphrey,D2,L8,Reunion5]            1 
+asistencia[Sheryl Humphrey,D2,M2,Reunion4]            1
+asistencia[Sheryl Humphrey,D2,M8,Reunion2]            1
+disponibilidad_espacio[D2,L8,Reunion5]            1
+disponibilidad_espacio[D2,M2,Reunion4]            1
+disponibilidad_espacio[D2,M8,Reunion2]            1
+disponibilidad_espacio[D2,J8,Reunion3]            1
+disponibilidad_espacio[C3,L3,Reunion1]            1
+presencialidad[Reunion1]            1
+presencialidad[Reunion2]            1
+presencialidad[Reunion3]            1
+presencialidad[Reunion4]            1
+presencialidad[Reunion5]            1

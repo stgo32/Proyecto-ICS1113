@@ -1,0 +1,9 @@
+Nombre,Utilidad
+Hector Johnson,0.083
+John Ellis,0.496
+Susan Townsend,0.276
+Elizabeth Lewis,0.45
+Vanessa Collins,0.2
+Peter Castillo,0.213
+Katelyn Cooper,0.448
+Benjamin Douglas,0.827

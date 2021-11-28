@@ -1,0 +1,104 @@
+DEBUG ['d:\\Universidad\\Tercer Año\\Semestre 2\\Optimización\\Proyecto-ICS1113\\E2\\model.py']
+Seed was: 5933002158754574543
+Set parameter Username
+Academic license - for non-commercial use only - expires 2022-01-25
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 6 physical cores, 6 logical processors, using up to 6 threads
+Optimize a model with 30965 rows, 29255 columns and 200255 nonzeros
+Model fingerprint: 0x07ad8d06
+Variable types: 0 continuous, 29255 integer (29255 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+06]
+  Objective range  [4e-02, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+01]
+Presolve removed 29010 rows and 21555 columns
+Presolve time: 0.20s
+Presolved: 1955 rows, 7700 columns, 34645 nonzeros
+Variable types: 0 continuous, 7700 integer (7700 binary)
+
+Root relaxation: objective 1.904300e+01, 1574 iterations, 0.03 seconds (0.03 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   19.04300    0   20          -   19.04300      -     -    0s
+H    0     0                      16.0720000   19.04300  18.5%     -    0s
+H    0     0                      16.8530000   19.04300  13.0%     -    0s
+H    0     0                      17.0090000   19.04300  12.0%     -    0s
+H    0     0                      18.5320000   19.04300  2.76%     -    0s
+H    0     0                      18.7050000   19.04300  1.81%     -    0s
+     0     0   19.04300    0   22   18.70500   19.04300  1.81%     -    0s
+H    0     0                      18.9180000   19.04300  0.66%     -    0s
+     0     0   19.04300    0   22   18.91800   19.04300  0.66%     -    0s
+     0     0   19.04300    0   16   18.91800   19.04300  0.66%     -    0s
+
+Cutting planes:
+  Gomory: 25
+  Cover: 39
+  Clique: 35
+
+Explored 1 nodes (3661 simplex iterations) in 0.88 seconds (0.69 work units)
+Thread count was 6 (of 6 available processors)
+
+Solution count 6: 18.918 18.705 18.532 ... 16.072
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.891800000000e+01, best bound 1.891800000000e+01, gap 0.0000%
+
+    Variable            x
+-------------------------
+asistencia[Hector Johnson,A5,L3,Reunion1]            1 
+asistencia[Hector Johnson,A5,V6,Reunion5]            1 
+asistencia[Susan Townsend,A5,L3,Reunion1]            1 
+asistencia[Elizabeth Lewis,D2,M8,Reunion2]            1
+asistencia[Vanessa Collins,D2,L7,Reunion4]            1
+asistencia[Vanessa Collins,D2,J8,Reunion3]            1
+asistencia[Vanessa Collins,A5,L3,Reunion1]            1 
+asistencia[Benjamin Douglas,D2,J8,Reunion3]            1 
+asistencia[Benjamin Douglas,A5,L3,Reunion1]            1
+asistencia[Christopher Brown,D2,L7,Reunion4]            1 
+PS D:\Universidad\Tercer Año\Semestre 2\Optimización\Proyecto-ICS1113> python .\E2\model.py
+DEBUG ['.\\E2\\model.py']
+Seed was: 5933002158754574543
+Set parameter Username
+Academic license - for non-commercial use only - expires 2022-01-25
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 6 physical cores, 6 logical processors, using up to 6 threads
+DEBUG ['.\\E2\\model.py']
+Seed was: 5933002158754574543
+Set parameter Username
+Academic license - for non-commercial use only - expires 2022-01-25
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 6 physical cores, 6 logical processors, using up to 6 threads
+Optimize a model with 1705 rows, 1355 columns and 8555 nonzeros
+Model fingerprint: 0xd028e12f
+Variable types: 0 continuous, 1355 integer (1355 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+06]
+  Objective range  [2e-01, 8e-01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+01]
+Presolve removed 1470 rows and 1024 columns
+Presolve time: 0.00s
+
+Explored 0 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)
+Thread count was 1 (of 6 available processors)
+
+Solution count 0
+No other solutions better than -1e+100
+
+Model is infeasible
+Best objective -, best bound -, gap -
+
+    Variable            x
+-------------------------
+Traceback (most recent call last):
+  File ".\E2\model.py", line 234, in <module>
+    model = solve_model()
+  File ".\E2\model.py", line 213, in solve_model
+    model.printAttr("x")
+  File "src\gurobipy\model.pxi", line 2480, in gurobipy.Model.printAttr
+  File "src\gurobipy\model.pxi", line 1894, in gurobipy.Model.getAttr
+  File "src\gurobipy\attrutil.pxi", line 148, in gurobipy.__gettypedattrlist
+gurobipy.GurobiError: Unable to retrieve attribute 'x'
