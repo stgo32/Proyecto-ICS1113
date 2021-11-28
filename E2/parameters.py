@@ -5,10 +5,10 @@ print("DEBUG", sys.argv)
 days = ['L', 'M', 'W', 'J', 'V']
 salas = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
 
-CAMBIAR_PERSONAS = 1
-CAMBIAR_SALAS = 1
-CAMBIAR_MODULOS = 1
-CAMBIAR_REUNIONES = 1
+CAMBIAR_PERSONAS = 0
+CAMBIAR_SALAS = 0
+CAMBIAR_MODULOS = 0
+CAMBIAR_REUNIONES = 0
 
 if len(sys.argv) > 1:
     print("Holaaaa")
