@@ -5,8 +5,12 @@ carpeta = "salas-vs-personas"
 n = 2
 
 AFOROS = [[5, 5], [4, 4], [2, 2]]
-PERSONAS_SALAS = [[25, 5], [10, 2], [5, 1]]
-REUNIONES = []
+# Al variar los aforos el modelo sigue funcionando hasta que son tan restringidos que
+# no se pueden realizar las reuniones
+PERSONAS_SALAS = [[25, 5], [25, 3], [25, 1]]
+# [Cantidad de personas, cantidad de salas]
+# Al variar las salas el modelo sigue funcionando hasta que son tan restringidas que
+# no se pueden realizar las reuniones
 
 n = 0
 
