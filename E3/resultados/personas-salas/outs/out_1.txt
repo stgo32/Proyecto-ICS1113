@@ -1,0 +1,48 @@
+asistencia[Hector Johnson,A5,L3,Reunion1]            1 
+asistencia[Hector Johnson,A5,V6,Reunion5]            1 
+asistencia[Susan Townsend,A5,L3,Reunion1]            1 
+asistencia[Elizabeth Lewis,D2,M8,Reunion2]            1
+asistencia[Vanessa Collins,D2,L7,Reunion4]            1
+asistencia[Vanessa Collins,D2,J8,Reunion3]            1
+asistencia[Vanessa Collins,A5,L3,Reunion1]            1 
+asistencia[Benjamin Douglas,D2,J8,Reunion3]            1 
+asistencia[Benjamin Douglas,A5,L3,Reunion1]            1
+asistencia[Christopher Brown,D2,L7,Reunion4]            1 
+PS D:\Universidad\Tercer Año\Semestre 2\Optimización\Proyecto-ICS1113> python .\E2\model.py
+DEBUG ['.\\E2\\model.py']
+Seed was: 5933002158754574543
+Set parameter Username
+Academic license - for non-commercial use only - expires 2022-01-25
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 6 physical cores, 6 logical processors, using up to 6 threads
+Optimize a model with 5645 rows, 4955 columns and 32855 nonzeros
+Model fingerprint: 0x2673d59a
+Variable types: 0 continuous, 4955 integer (4955 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+06]
+  Objective range  [4e-03, 9e-01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+01]
+Presolve removed 4992 rows and 3825 columns
+Presolve time: 0.01s
+
+Explored 0 nodes (0 simplex iterations) in 0.01 seconds (0.01 work units)  
+Thread count was 1 (of 6 available processors)
+
+Solution count 0
+No other solutions better than -1e+100
+
+Model is infeasible
+Best objective -, best bound -, gap -
+
+    Variable            x
+-------------------------
+Traceback (most recent call last):
+  File ".\E2\model.py", line 234, in <module>
+    model = solve_model()
+  File ".\E2\model.py", line 213, in solve_model
+    model.printAttr("x")
+  File "src\gurobipy\model.pxi", line 2480, in gurobipy.Model.printAttr
+  File "src\gurobipy\model.pxi", line 1894, in gurobipy.Model.getAttr
+  File "src\gurobipy\attrutil.pxi", line 148, in gurobipy.__gettypedattrlist
+gurobipy.GurobiError: Unable to retrieve attribute 'x'

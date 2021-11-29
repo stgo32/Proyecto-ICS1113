@@ -1,0 +1,77 @@
+asistencia[Christopher Hamilton Jr.,E1,M4,Reunion7]            1 
+asistencia[Christopher Hamilton Jr.,E1,V6,Reunion1]            1 
+asistencia[Christopher Hamilton Jr.,C2,J9,Reunion8]            1 
+asistencia[Christopher Hamilton Jr.,A3,V2,Reunion2]            1 
+asistencia[Christopher Hamilton Jr.,G6,M5,Reunion12]            1 
+asistencia[Christopher Hamilton Jr.,G6,J2,Reunion3]            1 
+asistencia[Christopher Hamilton Jr.,G6,J5,Reunion10]            1 
+asistencia[Christopher Hamilton Jr.,E12,W4,Reunion11]            1 
+asistencia[Christopher Hamilton Jr.,C13,L6,Reunion14]            1 
+asistencia[Anna Ashley,E1,J1,Reunion13]            1 
+asistencia[Anna Ashley,A3,V2,Reunion2]            1 
+asistencia[Anna Ashley,D4,M3,Reunion9]            1 
+asistencia[Anna Ashley,G6,M5,Reunion12]            1 
+asistencia[Anna Ashley,G6,J2,Reunion3]            1 
+asistencia[Anna Ashley,G6,J5,Reunion10]            1 
+asistencia[Anna Ashley,C13,L6,Reunion14]            1 
+asistencia[Anna Ashley,A15,J7,Reunion4]            1 
+asistencia[Kimberly Hernandez,C2,J9,Reunion8]            1 
+asistencia[Kimberly Hernandez,A3,L4,Reunion6]            1 
+asistencia[Kimberly Hernandez,D4,M3,Reunion9]            1 
+asistencia[Veronica Haynes,E1,V6,Reunion1]            1 
+asistencia[Veronica Haynes,G6,J2,Reunion3]            1 
+asistencia[Veronica Haynes,G6,J5,Reunion10]            1 
+asistencia[Veronica Haynes,A15,J7,Reunion4]            1 
+asistencia[Steve Young,C2,J9,Reunion8]            1 
+asistencia[Steve Young,D4,M3,Reunion9]            1 
+asistencia[Steve Young,C9,L1,Reunion5]            1 
+asistencia[Steve Young,E12,W4,Reunion11]            1 
+asistencia[Steve Young,C13,L6,Reunion14]            1 
+asistencia[Corey Hall,A3,L4,Reunion6]            1 
+asistencia[Corey Hall,A3,V2,Reunion2]            1 
+asistencia[Corey Hall,G6,J2,Reunion3]            1 
+asistencia[Corey Hall,C13,L6,Reunion14]            1 
+asistencia[James Carrillo,A15,J7,Reunion4]            1 
+asistencia[Duane Santana,A3,L4,Reunion6]            1 
+asistencia[Duane Santana,D4,M3,Reunion9]            1 
+asistencia[Duane Santana,E12,W4,Reunion11]            1 
+asistencia[Duane Santana,A15,J7,Reunion4]            1 
+asistencia[Catherine Perkins,A3,L4,Reunion6]            1 
+asistencia[Catherine Perkins,G6,M5,Reunion12]            1 
+asistencia[Catherine Perkins,G6,J5,Reunion10]            1 
+asistencia[Katherine Mays,C2,J9,Reunion8]            1 
+asistencia[Katherine Mays,A3,L4,Reunion6]            1 
+asistencia[Katherine Mays,A3,V2,Reunion2]            1 
+asistencia[Katherine Mays,E12,W4,Reunion11]            1 
+asistencia[Bobby Anderson,C2,J9,Reunion8]            1 
+asistencia[Bobby Anderson,E12,W4,Reunion11]            1 
+asistencia[Bobby Anderson,A15,J7,Reunion4]            1 
+disponibilidad_espacio[E1,M4,Reunion7]            1 
+disponibilidad_espacio[E1,J1,Reunion13]            1 
+disponibilidad_espacio[E1,V6,Reunion1]            1 
+disponibilidad_espacio[C2,J9,Reunion8]            1 
+disponibilidad_espacio[A3,L4,Reunion6]            1 
+disponibilidad_espacio[A3,V2,Reunion2]            1 
+disponibilidad_espacio[D4,M3,Reunion9]            1 
+disponibilidad_espacio[G6,M5,Reunion12]            1 
+disponibilidad_espacio[G6,J2,Reunion3]            1 
+disponibilidad_espacio[G6,J5,Reunion10]            1 
+disponibilidad_espacio[C9,L1,Reunion5]            1 
+disponibilidad_espacio[E12,W4,Reunion11]            1 
+disponibilidad_espacio[C13,L6,Reunion14]            1 
+disponibilidad_espacio[A15,J7,Reunion4]            1 
+presencialidad[Reunion1]            1 
+presencialidad[Reunion2]            1 
+presencialidad[Reunion3]            1 
+presencialidad[Reunion4]            1 
+presencialidad[Reunion5]            1 
+presencialidad[Reunion6]            1 
+presencialidad[Reunion7]            1 
+presencialidad[Reunion8]            1 
+presencialidad[Reunion9]            1 
+presencialidad[Reunion10]            1 
+presencialidad[Reunion11]            1 
+presencialidad[Reunion12]            1 
+presencialidad[Reunion13]            1 
+presencialidad[Reunion14]            1 
+presencialidad[Reunion15]            1 

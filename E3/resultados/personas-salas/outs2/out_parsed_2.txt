@@ -1,0 +1,46 @@
+DEBUG ['.\\E2\\model.py']
+Seed was: 5933002158754574543
+Set parameter Username
+Academic license - for non-commercial use only - expires 2022-01-25
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 6 physical cores, 6 logical processors, using up to 6 threads
+Optimize a model with 7205 rows, 5855 columns and 40055 nonzeros
+Model fingerprint: 0x0efb53a0
+Variable types: 0 continuous, 5855 integer (5855 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+06]
+  Objective range  [4e-02, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 5e+00]
+Presolve removed 6455 rows and 4458 columns
+Presolve time: 0.09s
+Presolved: 750 rows, 1397 columns, 7019 nonzeros
+Variable types: 0 continuous, 1397 integer (1397 binary)
+
+Root relaxation: infeasible, 889 iterations, 0.01 seconds (0.01 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 infeasible    0               - infeasible      -     -    0s
+
+Explored 1 nodes (889 simplex iterations) in 0.12 seconds (0.10 work units)
+Thread count was 6 (of 6 available processors)
+
+Solution count 0
+No other solutions better than -1e+100
+
+Model is infeasible
+Best objective -, best bound -, gap -
+
+    Variable            x
+-------------------------
+Traceback (most recent call last):
+  File ".\E2\model.py", line 234, in <module>
+    model = solve_model()
+  File ".\E2\model.py", line 213, in solve_model
+    model.printAttr("x")
+  File "src\gurobipy\model.pxi", line 2480, in gurobipy.Model.printAttr
+  File "src\gurobipy\model.pxi", line 1894, in gurobipy.Model.getAttr
+  File "src\gurobipy\attrutil.pxi", line 148, in gurobipy.__gettypedattrlist
+gurobipy.GurobiError: Unable to retrieve attribute 'x'

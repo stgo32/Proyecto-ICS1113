@@ -1,0 +1,29 @@
+DEBUG ['E2\\model.py', '8', '8', '9', '8', '2', '2', '0', '5']
+Holaaaa
+Seed was: 5933002158754574543
+Set parameter Username
+Academic license - for non-commercial use only - expires 2022-01-25
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 6 physical cores, 6 logical processors, using up to 6 threads
+Optimize a model with 19450 rows, 18230 columns and 119480 nonzeros
+Model fingerprint: 0x3f266cf9
+Variable types: 0 continuous, 18230 integer (18230 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+06]
+  Objective range  [2e-01, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 5e+00]
+Presolve removed 17293 rows and 14775 columns
+Presolve time: 0.24s
+
+Explored 0 nodes (0 simplex iterations) in 0.27 seconds (0.22 work units)
+Thread count was 1 (of 6 available processors)
+
+Solution count 0
+No other solutions better than -1e+100
+
+Model is infeasible
+Best objective -, best bound -, gap -
+
+    Variable            x 
+-------------------------

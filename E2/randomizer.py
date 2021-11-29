@@ -1,6 +1,15 @@
-from random import randint, uniform, choice
+from os import write
+import random
 from faker import Faker
 import parameters as p
+from read_csv import read_simple_csv
+import sys
+
+#seed = random.randrange(sys.maxsize)
+seed = 5933002158754574543
+random.seed(seed)
+Faker.seed(seed)
+print("Seed was:", seed)
 
 
 def set_personas(i):
@@ -11,7 +20,7 @@ def set_personas(i):
 def set_espacios(j):
     esp = []
     for i in range(j):
-        esp.append(f'{choice(p.salas)}{i + 1}')
+        esp.append(f'{random.choice(p.salas)}{i + 1}')
     return esp
 
 
@@ -27,7 +36,7 @@ def disponibilidad_i_k(personas, modulos):
     disponibilidad = {}
     for i in personas:
         for m in modulos:
-            disponibilidad[(i, m)] = randint(0, 1)
+            disponibilidad[(i, m)] = random.randint(0, 1)
     return disponibilidad
 
 
@@ -35,7 +44,7 @@ def disponibilidad_j_k(espacios, modulos):
     disponibilidad = {}
     for e in espacios:
         for m in modulos:
-            disponibilidad[(e, m)] = randint(0, 1)
+            disponibilidad[(e, m)] = random.randint(0, 1)
     return disponibilidad
 
 
@@ -43,49 +52,49 @@ def clave_i_l(personas, reuniones):
     disponibilidad = {}
     for i in personas:
         for r in reuniones:
-            disponibilidad[(i, r)] = randint(0, 1)
+            disponibilidad[(i, r)] = random.randint(0, 1)
     return disponibilidad
 
 
 def min_l(reuniones, min_, max_):
     min_l = []
     for r in reuniones:
-        min_l.append(randint(min_, max_))
+        min_l.append(random.randint(min_, max_))
     return min_l
 
 
 def max_l(reuniones, min_l, max_):
     max_l = []
     for r in range(len(reuniones)):
-        max_l.append(randint(min_l[r], max_))
+        max_l.append(random.randint(min_l[r], max_))
     return max_l
 
 
 def aforo_j(espacios, min_, max_):
     aforos = []
     for e in espacios:
-        aforos.append(randint(min_, max_))
+        aforos.append(random.randint(min_, max_))
     return aforos
 
 
 def utilidades_i(personas):
     util = {}
     for i in personas:
-        util[i] = round(uniform(0, 1), 3)
+        util[i] = round(random.uniform(0, 1), 3)
     return util
 
 
 def utilidades_l(reuniones):
     util = {}
     for r in reuniones:
-        util[r] = round(uniform(0, 1), 3)
+        util[r] = round(random.uniform(0, 1), 3)
     return util
 
 
 def costos_l(reuniones):
     costo = {}
     for r in reuniones:
-        costo[r] = round(uniform(0, 1), 3)
+        costo[r] = round(random.uniform(0, 1), 3)
     return costo
 
 
@@ -99,17 +108,32 @@ def presencialidad(espacios):
     return p
 
 
-def randomize(i, j, k, L):
+def randomize(i, j, k, L, new={"personas": 1, "salas": 1, "modulos": 1, "reuniones": 1}):
     """
     i -> int cantidad de personas
     j -> int cantidad de espacios
     k -> int cantidad de modulos
     l -> int cantidad de reuniones
     """
-    personas = set_personas(i)
-    espacios = set_espacios(j)
-    modulos = set_modulos(k)
-    reuniones = set_reuniones(L)
+    if new["personas"]:
+        personas = set_personas(i)
+    else:
+        personas = read_simple_csv('personas')
+
+    if new["salas"]:
+        espacios = set_espacios(j)
+    else:
+        espacios = read_simple_csv('espacios')
+
+    if new["modulos"]:
+        modulos = set_modulos(k)
+    else:
+        modulos = read_simple_csv('modulos')
+
+    if new["reuniones"]:
+        reuniones = set_reuniones(L)
+    else:
+        reuniones = read_simple_csv('reuniones')
 
     disp_i_k = disponibilidad_i_k(personas, modulos)
     disp_j_k = disponibilidad_j_k(espacios, modulos)
@@ -140,6 +164,10 @@ def randomize(i, j, k, L):
     print('------------------------------------------------------')
     """
 
+    #i: Personas
+    #j: Salas
+    #k: Modulos
+    #l: Reuniones
     with open('E2/DB/personas.csv', 'w') as file:
         for persona in personas:
             file.write(f'{persona}\n')
@@ -200,5 +228,6 @@ def randomize(i, j, k, L):
         disp_j_k, clave, m_l, maxx_l, af_j, util_i, util_l, costo_l, pre
 
 
-if __name__ == 'main':
-    randomize(3, 3, 3, 3)
+if __name__ == '__main__':
+    new = {"personas": 1, "salas": 0, "modulos": 0, "reuniones": 0}
+    randomize(10, 12, 9, 8, new)
