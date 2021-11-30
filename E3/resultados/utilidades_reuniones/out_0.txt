@@ -1,0 +1,80 @@
+asistencia[Jason Curry,D1,L1,Reunion5]            1 
+asistencia[Jason Curry,D1,L2,Reunion4]            1
+asistencia[Jason Curry,D1,L4,Reunion3]            1
+asistencia[Jason Curry,D1,L5,Reunion2]            1
+asistencia[Jason Curry,D1,M5,Reunion1]            1
+asistencia[Jason Curry,D1,M8,Reunion6]            1
+asistencia[Jason Curry,E4,W5,Reunion7]            1
+asistencia[Jason Curry,D8,L6,Reunion8]            1 
+asistencia[Steven Cobb,D1,L1,Reunion5]            1
+asistencia[Steven Cobb,D1,L2,Reunion4]            1
+asistencia[Steven Cobb,D1,L4,Reunion3]            1
+asistencia[Steven Cobb,D1,L5,Reunion2]            1
+asistencia[Steven Cobb,D1,M5,Reunion1]            1
+asistencia[Steven Cobb,D1,M8,Reunion6]            1
+asistencia[Steven Cobb,E4,W5,Reunion7]            1
+asistencia[Steven Cobb,D8,L6,Reunion8]            1
+asistencia[Stacey Phillips,D1,L1,Reunion5]            1
+asistencia[Stacey Phillips,D1,L2,Reunion4]            1
+asistencia[Stacey Phillips,D1,L4,Reunion3]            1
+asistencia[Stacey Phillips,D1,L5,Reunion2]            1
+asistencia[Stacey Phillips,D1,M5,Reunion1]            1
+asistencia[Stacey Phillips,D1,M8,Reunion6]            1
+asistencia[Stacey Phillips,E4,W5,Reunion7]            1
+asistencia[Stacey Phillips,D8,L6,Reunion8]            1
+asistencia[Justin Robinson,D1,L1,Reunion5]            1
+asistencia[Justin Robinson,D1,L2,Reunion4]            1
+asistencia[Justin Robinson,D1,L4,Reunion3]            1
+asistencia[Justin Robinson,D1,L5,Reunion2]            1
+asistencia[Justin Robinson,D1,M5,Reunion1]            1
+asistencia[Justin Robinson,D1,M8,Reunion6]            1 
+asistencia[Justin Robinson,E4,W5,Reunion7]            1
+asistencia[Justin Robinson,D8,L6,Reunion8]            1
+asistencia[Darryl Yoder,D1,L1,Reunion5]            1
+asistencia[Darryl Yoder,D1,L2,Reunion4]            1
+asistencia[Darryl Yoder,D1,L4,Reunion3]            1
+asistencia[Darryl Yoder,D1,L5,Reunion2]            1
+asistencia[Darryl Yoder,D1,M5,Reunion1]            1
+asistencia[Darryl Yoder,D1,M8,Reunion6]            1
+asistencia[Darryl Yoder,E4,W5,Reunion7]            1
+asistencia[Darryl Yoder,D8,L6,Reunion8]            1
+asistencia[John Gay,D1,L1,Reunion5]            1
+asistencia[John Gay,D1,L2,Reunion4]            1
+asistencia[John Gay,D1,L4,Reunion3]            1
+asistencia[John Gay,D1,L5,Reunion2]            1
+asistencia[John Gay,D1,M5,Reunion1]            1
+asistencia[John Gay,D1,M8,Reunion6]            1
+asistencia[John Gay,E4,W5,Reunion7]            1
+asistencia[John Gay,D8,L6,Reunion8]            1 
+asistencia[Carolyn Burke,D1,L1,Reunion5]            1
+asistencia[Carolyn Burke,D1,L2,Reunion4]            1
+asistencia[Carolyn Burke,D1,L4,Reunion3]            1
+asistencia[Carolyn Burke,D1,L5,Reunion2]            1
+asistencia[Carolyn Burke,D1,M5,Reunion1]            1
+asistencia[Carolyn Burke,D1,M8,Reunion6]            1
+asistencia[Carolyn Burke,E4,W5,Reunion7]            1
+asistencia[Carolyn Burke,D8,L6,Reunion8]            1
+asistencia[Joy Miller,D1,L1,Reunion5]            1
+asistencia[Joy Miller,D1,L2,Reunion4]            1
+asistencia[Joy Miller,D1,L4,Reunion3]            1
+asistencia[Joy Miller,D1,L5,Reunion2]            1
+asistencia[Joy Miller,D1,M5,Reunion1]            1
+asistencia[Joy Miller,D1,M8,Reunion6]            1
+asistencia[Joy Miller,E4,W5,Reunion7]            1
+asistencia[Joy Miller,D8,L6,Reunion8]            1 
+disponibilidad_espacio[D1,L1,Reunion5]            1
+disponibilidad_espacio[D1,L2,Reunion4]            1
+disponibilidad_espacio[D1,L4,Reunion3]            1
+disponibilidad_espacio[D1,L5,Reunion2]            1
+disponibilidad_espacio[D1,M5,Reunion1]            1
+disponibilidad_espacio[D1,M8,Reunion6]            1
+disponibilidad_espacio[E4,W5,Reunion7]            1
+disponibilidad_espacio[D8,L6,Reunion8]            1
+presencialidad[Reunion1]            1
+presencialidad[Reunion2]            1
+presencialidad[Reunion3]            1
+presencialidad[Reunion4]            1
+presencialidad[Reunion5]            1
+presencialidad[Reunion6]            1
+presencialidad[Reunion7]            1
+presencialidad[Reunion8]            1

@@ -40,8 +40,12 @@ elif analisis == "reuniones":
 
 
 if analisis == "parse":
+    
+    path_in = os.path.join("E3", "resultados", "utilidades_reuniones", f"out_3.txt")
+    path_out = os.path.join("E3", "resultados", "utilidades_reuniones", f"out_parsed_3.txt")
+    parse(path_in, path_out)
     n = 2
-    for i in range(n):
-        path_in = os.path.join("E3", "resultados", "utilidades", "outs", f"out_{i}.txt")
-        path_out = os.path.join("E3", "resultados", "utilidades", "outs", f"out_parsed_{i}.txt")
-        parse(path_in, path_out)
+    #for i in range(n):
+    #    path_in = os.path.join("E3", "resultados", "utilidades_reuniones", f"out_{i}.txt")
+    #    path_out = os.path.join("E3", "resultados", "utilidades_reuniones", f"out_parsed_{i}.txt")
+    #    parse(path_in, path_out)
